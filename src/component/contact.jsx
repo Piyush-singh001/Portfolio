@@ -10,11 +10,14 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", {
-        name,
-        email,
-        project,
-      });
+      const res = await axios.post(
+        "https://portfolio-backend-3m0r.onrender.com",
+        {
+          name,
+          email,
+          project,
+        }
+      );
 
       alert("Message sent successfully!");
       setName("");
