@@ -121,7 +121,7 @@ const MultipleString = () => {
       </p>
       <div
         ref={stringRef}
-        className="w-full max-w-[1000px] h-[400px] aspect-[5/1] mx-auto touch-none flex justify-center items-center "
+        className="w-full max-w-[1000px] md:h-[400px] h-[200px] aspect-[5/1] mx-auto touch-none flex justify-center items-center "
       >
         <svg
           viewBox="0 0 1000 200"
