@@ -48,7 +48,7 @@ const SkillSection = () => {
             end: "top 20%",
             toggleActions: "play reverse play reverse",
           },
-          delay: i * 0.3, // stagger effect
+          delay: i * 0.2, // stagger effect
         }
       );
     });
