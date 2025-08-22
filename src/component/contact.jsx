@@ -11,7 +11,7 @@ export default function ContactForm() {
 
     try {
       const res = await axios.post(
-        "https://portfolio-backend-3m0r.onrender.com",
+        "https://portfolio-backend-3m0r.onrender.com/api/contact",
         {
           name,
           email,
