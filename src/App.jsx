@@ -7,6 +7,7 @@ import SkillSection from "./component/skills";
 import Projects from "./component/projects";
 import Contact from "./component/contact";
 import SkillSections from "./component/ss";
+import Servicess from "./component/examp";
 function App() {
   return (
     <div className="App scroll-smooth">
@@ -14,7 +15,7 @@ function App() {
       <Hero />
       <About />
       <SkillSection />
-      <Services />
+      <Servicess />
       <SpringString />
       <Projects />
       <Contact />

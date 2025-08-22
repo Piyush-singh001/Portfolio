@@ -19,7 +19,7 @@ function Services() {
           trigger: element,
           start: "top 80%",
           end: "top -30%",
-          toggleActions: "play play play reverse",
+          toggleActions: "play none none reverse",
         },
         x: 0,
         opacity: 1,

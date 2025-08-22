@@ -8,6 +8,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   const photonRef = useRef(null);
+  const rightContainerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const boxes = rightContainerRef.current.querySelectorAll(".box");
+
+    gsap.fromTo(
+      boxes,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.3, // 0.3 sec delay between each animation
+        scrollTrigger: {
+          trigger: rightContainerRef.current,
+          start: "top 80%",
+          end: "top 20%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
 
   useLayoutEffect(() => {
     const element = photonRef.current;
@@ -22,7 +45,7 @@ function About() {
           scrollTrigger: {
             trigger: element,
             start: "top 90%",
-            end: "top -30%",
+            end: "top 20%",
             toggleActions: "play reverse play reverse",
           },
           opacity: 1,
@@ -57,19 +80,22 @@ function About() {
         </div>
 
         {/* Right Content */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl md:px-28 px-4">
+        <div
+          ref={rightContainerRef}
+          className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl md:px-28 px-4"
+        >
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <div className="bg-white border flex flex-col items-center rounded-xl p-4 shadow-sm w-[180px]">
+            <div className="box bg-white border flex flex-col items-center rounded-xl p-4 shadow-sm w-[180px]">
               <FaLightbulb className="text-2xl mx-auto mb-1 text-gray-800" />
               <h3 className="font-semibold">Experience</h3>
               <p className="text-sm text-gray-500">Fresher</p>
             </div>
-            <div className="bg-white border rounded-xl flex flex-col items-center p-4 shadow-sm w-[180px]">
+            <div className="box bg-white border rounded-xl flex flex-col items-center p-4 shadow-sm w-[180px]">
               <FaBriefcase className="text-2xl mx-auto mb-1 text-gray-800" />
               <h3 className="font-semibold">Completed</h3>
               <p className="text-sm text-gray-500">8+ Projects</p>
             </div>
-            <div className="bg-white border rounded-xl flex flex-col items-center p-4 shadow-sm w-[180px]">
+            <div className="box bg-white border rounded-xl flex flex-col items-center p-4 shadow-sm w-[180px]">
               <FaHeadphones className="text-2xl mx-auto mb-1 text-gray-800" />
               <h3 className="font-semibold">Support</h3>
               <p className="text-sm text-gray-500">Online 24/7</p>
@@ -83,7 +109,7 @@ function About() {
           </p>
 
           <a
-            href="/Piyush-cv.pdf"
+            href="/images/piyushCv.pdf"
             download
             className="flex items-center gap-2 bg-black text-white px-10 py-5 rounded-3xl hover:bg-gray-800 transition"
           >

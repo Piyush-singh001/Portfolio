@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -26,11 +26,38 @@ const skills = [
 ];
 
 const SkillSection = () => {
-  const containerRef = useRef(null);
-  const scrollRef = useRef(null);
+  const containerRef = useRef(null); // parent section
+  const scrollRef = useRef(null); // horizontal scroll div
+  const skillRefs = useRef([]); // array of all skill boxes
 
+  // Mobile fade-in animation
   useEffect(() => {
-    if (window.innerWidth < 770) return;
+    if (window.innerWidth > 1023) return;
+    skillRefs.current.forEach((el, i) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: -50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el, // each box individually
+            start: "top 80%",
+            end: "top 20%",
+            toggleActions: "play reverse play reverse",
+          },
+          delay: i * 0.3, // stagger effect
+        }
+      );
+    });
+  }, []);
+
+  // Desktop horizontal scroll
+  useEffect(() => {
+    if (window.innerWidth < 1024) return;
+
     const scrollWidth = scrollRef.current.scrollWidth;
     const containerWidth = containerRef.current.clientWidth;
     const scrollLength = Math.max(0, scrollWidth - containerWidth);
@@ -70,10 +97,11 @@ const SkillSection = () => {
         {skills.map((skill, i) => (
           <div
             key={i}
-            className="w-[100px] sm:w-[140px] md:w-[220px] h-[100px] sm:h-[140px] md:h-[220px]
+            ref={(el) => (skillRefs.current[i] = el)}
+            className="box w-[100px] sm:w-[140px] md:w-[220px] h-[100px] sm:h-[140px] md:h-[220px]
              flex-shrink-0 bg-gray-100 rounded-xl shadow-md 
              flex flex-col items-center justify-center 
-             hover:scale-105 transition "
+             hover:scale-105 transition"
           >
             <div className="text-4xl mb-2">{skill.icon}</div>
             <p className="text-sm text-gray-700 text-center break-words">

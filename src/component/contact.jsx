@@ -80,7 +80,9 @@ export default function ContactForm() {
 
         {/* Right Side - Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
-          <h2 className="text-2xl font-semibold">Write me your project</h2>
+          <h2 className="text-2xl font-semibold">
+            Let’s build something amazing
+          </h2>
 
           <div className="space-y-4">
             <input
