@@ -43,7 +43,7 @@ function Project() {
           </div>
           <div className="flex flex-col items-start px-3">
             <p className="text-sm text-gray-700 text-start ">{project.name}</p>
-            <a>View Here</a>
+            <h3>View Here</h3>
           </div>
         </a>
       ))}
