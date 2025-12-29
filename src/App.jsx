@@ -15,7 +15,7 @@ function App() {
       <Hero />
       <About />
       <SkillSection />
-      <Services />
+      {/* <Services /> */}
       <SpringString />
       <Projects />
       <Contact />

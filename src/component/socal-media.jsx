@@ -21,7 +21,7 @@ function SocalMedia() {
   const socalMediaItems = [
     {
       name: "LinkedIn",
-      link: "https://www.linkedin.com/in/yourprofile",
+      link: "https://www.linkedin.com/in/piyush-singh-40647a342/",
       icon: (
         <FaLinkedin
           size={24}

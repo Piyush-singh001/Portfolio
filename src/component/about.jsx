@@ -25,7 +25,7 @@ function About() {
         scrollTrigger: {
           trigger: rightContainerRef.current,
           start: "top 80%",
-          end: "top 20%",
+          end: "top 0%",
           toggleActions: "play reverse play reverse",
         },
       }
@@ -45,7 +45,7 @@ function About() {
           scrollTrigger: {
             trigger: element,
             start: "top 90%",
-            end: "top 20%",
+            end: "top -20%",
             toggleActions: "play reverse play reverse",
           },
           opacity: 1,
@@ -109,7 +109,7 @@ function About() {
           </p>
 
           <a
-            href="/images/piyushCv.pdf"
+            href="/images/piyushResume.pdf"
             download
             className="flex items-center gap-2 bg-black text-white px-10 py-5 rounded-3xl hover:bg-gray-800 transition"
           >

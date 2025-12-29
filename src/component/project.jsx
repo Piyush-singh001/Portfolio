@@ -16,17 +16,19 @@ function Project() {
       projectLink: "https://weather-appa.netlify.app/",
     },
     {
-      name: "E-commerce web site",
-      imageUrl:
-        "https://t4.ftcdn.net/jpg/05/87/96/55/360_F_587965572_9LpEJeVfE7V53ikuT1req9o08iMXlyjs.jpg",
-      projectLink: "https://piyush-singh001.github.io/Ecommerce-website/",
+      name: "Printrest Clone",
+      imageUrl: "/images/Printrest.jpg",
+      projectLink: "https://printrest-clone.netlify.app/",
     },
   ];
 
   return (
     <div className="grid md:grid-cols-2 md:gap-20 grid-cols-1 gap-3 pt-10 place-items-center">
       {projects.map((project, i) => (
-        <div
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={project.projectLink}
           key={i}
           className="w-3/4 md:w-[400px] h-[35vh] md:h-[400px] 
                        bg-gray-100 rounded-xl shadow-md 
@@ -41,16 +43,9 @@ function Project() {
           </div>
           <div className="flex flex-col items-start px-3">
             <p className="text-sm text-gray-700 text-start ">{project.name}</p>
-            <a
-              className=""
-              target="_blank"
-              rel="noopener noreferrer"
-              href={project.projectLink}
-            >
-              View Here
-            </a>
+            <a>View Here</a>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );

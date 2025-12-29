@@ -10,7 +10,7 @@ function MyName() {
       <h3 className="text-gray-500 md:text-xl text-l">
         _________MERN Stack Developer.
       </h3>
-      <p className="text-gray-500 mt-5 text-sm">
+      <p className="text-gray-500 mt-5 text-smv p-5 md:p-0">
         Building sleek interfaces. Writing clean code. MERN Developer | Always
         learning, always building.
       </p>

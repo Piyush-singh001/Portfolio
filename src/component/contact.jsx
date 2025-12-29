@@ -43,9 +43,9 @@ export default function ContactForm() {
 
           <div className="border p-4 rounded-lg shadow-sm">
             <p className="font-semibold">Email</p>
-            <p className="text-gray-500">piyush.singh.webdev@gmail.com</p>
+            <p className="text-gray-500">piyushsengar243@gmail.com</p>
             <a
-              href="mailto:piyush.singh.webdev@gmail.com"
+              href="mailto:piyushsengar243@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-blue-500 mt-2 inline-block"

@@ -6,7 +6,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navItemsRef = useRef([]);
   const portfoliosRef = useRef([]);
-  const menu = ["Home", "About", "Skills", "Services", "Projects", "Contact"];
+  const menu = ["Home", "About", "Skills", "Projects", "Contact"]; // deleted Services
 
   useEffect(() => {
     const waitForRefs = () => {

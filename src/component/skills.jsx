@@ -45,7 +45,7 @@ const SkillSection = () => {
           scrollTrigger: {
             trigger: el, // each box individually
             start: "top 80%",
-            end: "top 20%",
+            // end: "top 20%",
             toggleActions: "play reverse play reverse",
           },
           delay: i * 0.2, // stagger effect
