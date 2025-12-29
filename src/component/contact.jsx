@@ -11,7 +11,7 @@ export default function ContactForm() {
 
     try {
       const res = await axios.post(
-        "https://portfolio-backend-3m0r.onrender.com/api/contact",
+        "https://portfolio-backend-2-yhqf.onrender.com/api/contact",
         {
           name,
           email,
@@ -82,7 +82,7 @@ export default function ContactForm() {
         </div>
 
         {/* Right Side - Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        {/* <form onSubmit={handleSubmit} className="space-y-6">
           <h2 className="text-2xl font-semibold">
             Let’s build something amazing
           </h2>
@@ -117,7 +117,7 @@ export default function ContactForm() {
             Send Message
             <span>📩</span>
           </button>
-        </form>
+        </form> */}
       </div>
     </div>
   );
