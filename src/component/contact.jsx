@@ -36,7 +36,7 @@ export default function ContactForm() {
     >
       <h2 className="text-4xl font-bold text-gray-800 my-10">Contact Us</h2>
 
-      <div className="w-1/2 bg-white shadow-lg p-8 rounded-xl">
+      <div className="md:w-1/2 w-full bg-white shadow-lg p-8 rounded-xl">
         {/* Left Side - Contact Options */}
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold">Talk to me</h2>
